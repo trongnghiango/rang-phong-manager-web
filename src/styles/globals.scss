@@ -64,7 +64,9 @@ table {
   }
   tbody tr {
     @apply border-none border-b-gray-100;
-		
+		&:hover {
+			@apply bg-blue-300;
+		}		
   }
 	tbody tr:nth-child(even) {@apply bg-[#edeeee]}
 	tbody tr:nth-child(odd) {@apply bg-[#FFF]}

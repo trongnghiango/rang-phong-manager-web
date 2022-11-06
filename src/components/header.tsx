@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const initTabs = [
@@ -19,13 +20,13 @@ const initTabs = [
     id: "2",
     title: "Prospects",
     active: false,
-    route: "/",
+    route: "/test",
   },
   {
     id: "3",
     title: "Account",
     active: false,
-    route: "/",
+    route: "/test-2",
   },
   {
     id: "4",
@@ -48,17 +49,15 @@ const initTabs = [
 ];
 export const Header = () => {
   const [tabs, setTabs] = useState(initTabs);
+  const router = useRouter();
+  console.log(router.pathname);
 
   const selectTabHandler = (selected_id: string) => {
     let temps = [...tabs];
-    for (let i = 0; i < temps.length; i++) {
-      //temps[i]?.active = false;
-    }
     //temps[selected_id]?.active = true;
     temps.forEach((ite) => {
       ite.active = false;
       if (ite.id === selected_id) {
-        ite.active = true;
       }
     });
     setTabs(temps);
@@ -123,12 +122,16 @@ export const Header = () => {
             <li
               key={idx}
               className={`${
-                item.active ? "item-menu-tab_active" : ""
+                router.pathname === item.route ? "item-menu-tab_active" : ""
               } item-menu-tab h-full bg-red-300 py-[10px] leading-6`}
-              onClick={() => selectTabHandler(item.id)}
             >
-              <Link href={item.route ?? "/"}>
-                <a>{item.title}</a>
+              <Link href={item.route ?? "/"} passHref>
+                <a
+                  //onClick={() => selectTabHandler(item.id)}
+                  className="h-full"
+                >
+                  {item.title}
+                </a>
               </Link>
             </li>
           ))}

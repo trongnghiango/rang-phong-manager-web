@@ -14,21 +14,21 @@ const AddNewPatient = () => {
                 <div className="mb-2 px-4">
                   <input
                     type={"text"}
-                    className="w-full border border-[#555] px-[10px] py-[5px]"
+                    className="w-full border border-[#555] bg-transparent px-[10px] py-[5px] outline-none"
                     placeholder="Last name"
                   />
                 </div>
                 <div className="mb-2 px-4">
                   <input
                     type={"text"}
-                    className="w-full border border-[#555] px-[10px] py-[5px]"
+                    className="w-full border border-[#555] px-[10px] py-[5px] outline-none"
                     placeholder="First name"
                   />
                 </div>
                 <div className="mb-2 px-4">
                   <input
                     type={"text"}
-                    className="w-[130px] border border-[#555] px-[10px] py-[5px]"
+                    className="w-[130px] border border-[#555] px-[10px] py-[5px] outline-none"
                     placeholder="MI"
                   />
                 </div>
@@ -36,8 +36,27 @@ const AddNewPatient = () => {
               <div className="flex flex-col">
                 <h3 className="px-4 pb-2">Patient gender</h3>
                 <div className="item-center mb-2 flex gap-8 pl-[55px]">
-                  <span>Male</span>
-                  <span>Female</span>
+                  <span>
+                    <input
+                      type="radio"
+                      id="male"
+                      name="age"
+                      value="30"
+                      className="mr-2"
+                    />
+                    <label htmlFor="male">Male</label>
+                  </span>
+
+                  <span>
+                    <input
+                      type="radio"
+                      id="female"
+                      name="age"
+                      value="30"
+                      className="mr-2"
+                    />
+                    <label htmlFor="female">Female</label>
+                  </span>
                 </div>
               </div>
               <div className="flex flex-col">
@@ -46,17 +65,17 @@ const AddNewPatient = () => {
                 <div className="mb-2 flex items-center gap-3 px-4">
                   <input
                     type={"text"}
-                    className="w-16 border border-[#555] px-[10px] py-[5px]"
+                    className="w-16 border border-[#555] px-[10px] py-[5px] outline-none"
                     placeholder="DD"
                   />
                   <input
                     type={"text"}
-                    className="w-16 border border-[#555] px-[10px] py-[5px]"
+                    className="w-16 border border-[#555] px-[10px] py-[5px] outline-none"
                     placeholder="MM"
                   />
                   <input
                     type={"text"}
-                    className="w-[130px] border border-[#555] px-[10px] py-[5px]"
+                    className="w-[130px] border border-[#555] px-[10px] py-[5px] outline-none"
                     placeholder="YYYY"
                   />
                 </div>
