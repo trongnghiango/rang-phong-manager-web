@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  my-app:
+    image: trongnghiango/my-app
+    build: 
+      context: .
+    container_name: my-app
+    restart: always
+    volumes: 
+      - .:/app
+    ports:
+      - "3000:3000"

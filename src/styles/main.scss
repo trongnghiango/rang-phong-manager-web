@@ -1,0 +1,338 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,900&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  /* font-family: Lobster; */
+  background-color: #111111;
+  font-family: Roboto, sans-serif;
+  color: white;
+}
+
+.icon-bar {
+  background-color: white;
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-top: 4px;
+  border-radius: 1px;
+}
+
+.navBarRight {
+  border-bottom: 3px solid #be933c !important;
+}
+
+.item-menu-tab {
+  background: linear-gradient(#be933c 0 0) bottom / var(--d, 0) 5px no-repeat;
+  height: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.item-menu-tab:hover,
+.item-menu-tab_active {
+  color: white;
+  --d: 100%;
+}
+
+h3 {
+  @apply text-lg font-semibold;
+}
+
+.custom-height {
+  height: calc(100 * var(--vh));
+}
+
+.model-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #fff 8px, transparent 1%) center,
+    linear-gradient(#fff 8px, transparent 1%) center, #00a2d8;
+  background-size: 9.25px 9.25px;
+}
+.suongmu-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background-image: radial-gradient(circle, #00a2d8 0%, #fff 100%); */
+  background-image: radial-gradient(
+    50% 50% at center,
+    transparent 0%,
+    #fff 100%
+  );
+}
+
+/* setting icon */
+.menuBtn {
+  background-image: url(/assets/images/menuZY.png);
+  height: 26px;
+  width: 26px;
+  background-repeat: no-repeat;
+  background-position-x: -2px;
+  background-position-y: 1px;
+  background-size: 450%;
+  /* display: inline-block; */
+  border: 1px solid #111111;
+  /* text-align: center; */
+  /* margin-top: 10px; */
+  /* overflow: hidden; */
+  cursor: pointer;
+  /* color: #b2b2b2; */
+}
+
+.menuBtn:hover,
+.menuBtn-active {
+  background-position-x: -78.5px;
+  background-position-y: 1px;
+}
+
+.menuBtn-grid-hide {
+  background-position-x: -2px;
+  background-position-y: -467px;
+}
+
+.menuBtn-grid-show {
+  background-position-x: -78.5px;
+  background-position-y: -467px;
+}
+.menuBtn-super-hide {
+  background-position-x: -2px;
+  background-position-y: -382px;
+}
+
+.menuBtn-super-show {
+  background-position-x: -78.5px;
+  background-position-y: -382px;
+}
+
+.menuBtn-set-hide {
+  background-position-y: -440px;
+}
+
+.menuBtn-set-show {
+  background-position-x: -80px;
+  background-position-y: -440px;
+}
+
+.btn {
+  background-image: url(/assets/images/viewZY.png);
+  height: 26px;
+  width: 26px;
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position-y: -28px;
+  background-size: 340px 50px;
+  /* margin: 0 auto; */
+  cursor: pointer;
+}
+
+.btn-7 {
+  background-position-y: -30px;
+  background-position-x: -134px;
+}
+
+.btn-8 {
+  background-position-y: 4px;
+  background-position-x: -134px;
+}
+
+.btn-front {
+  background-position-y: -30px;
+  background-position-x: -134px;
+}
+
+.btn-front:hover,
+.btn-front_active {
+  background-position-y: 4px;
+  background-position-x: -134px;
+}
+
+.btn-behind {
+  background-position-y: -30px;
+  background-position-x: -180px;
+}
+.btn-behind:hover,
+.btn-behind_active {
+  background-position-y: 4px;
+  background-position-x: -180px;
+}
+.btn-left {
+  background-position-y: -30px;
+  background-position-x: -89px;
+}
+
+.btn-left:hover,
+.btn-left_active {
+  background-position-y: 4px;
+  background-position-x: -89px;
+}
+
+.btn-right {
+  background-position-y: -30px;
+  background-position-x: -225px;
+}
+.btn-right:hover,
+.btn-right_active {
+  background-position-y: 4px;
+  background-position-x: -225px;
+}
+
+.btn-up {
+  background-position-y: -30px;
+  background-position-x: -44px;
+}
+.btn-up:hover,
+.btn-up_active {
+  background-position-y: 4px;
+  background-position-x: -44px;
+}
+
+.btn-down {
+  background-position-y: -30px;
+  background-position-x: -270px;
+}
+.btn-down:hover,
+.btn-down_active {
+  background-position-y: 4px;
+  background-position-x: -270px;
+}
+
+.btn-3 {
+  background-position-y: -30px;
+  background-position-x: -43px;
+}
+
+.mandibular-hide {
+  background-position-y: -30px;
+  background-position-x: 0px;
+}
+
+.mandibular-show {
+  background-position-y: 4px;
+  background-position-x: 0px;
+}
+.btn-upper {
+  background-position-y: -29px;
+  background-position-x: -315px;
+}
+
+.btn-upper:hover,
+.btn-upper_active {
+  background-position-y: 5px;
+  background-position-x: -315px;
+}
+
+.btn-lower {
+  background-position-y: -29px;
+  background-position-x: 0px;
+}
+.btn-lower:hover,
+.btn-lower_active {
+  background-position-y: 5px;
+  background-position-x: 0px;
+}
+
+.maxillary-hide {
+  background-position-y: -29px;
+  background-position-x: -315px;
+}
+
+.maxillary-show {
+  background-position-y: 5px;
+  background-position-x: -315px;
+}
+
+.content {
+  padding-top: 10px;
+  transform: translate3d(calc(50% + 40px), 0, 0);
+  text-align: left;
+  background: #202035;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -40px;
+  height: 1px;
+  width: 40px;
+  background: black;
+}
+
+/*! Table */
+table {
+	font-family: "DM sans", sans-serif;
+  @apply w-full;
+	thead {
+		@apply divide-x-[10px]
+	}
+  thead tr {
+    @apply bg-white border-b-[4px] border-b-gray-300;
+  }
+  tbody tr {
+    @apply border-none border-b-gray-100;
+		&:hover {
+			@apply bg-blue-300;
+		}		
+  }
+	tbody tr:nth-child(even) {@apply bg-[#edeeee]}
+	tbody tr:nth-child(odd) {@apply bg-[#FFF]}
+  td,
+  th {
+    @apply whitespace-nowrap p-3 text-left align-middle text-base text-[#707372];
+  }
+  th {
+    @apply font-semibold text-lg text-[#575659];
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .table-users {
+    tr {
+      display: grid;
+      grid-template-columns: 30% 20% 20% 10% 20%;
+    }
+    th,
+    td {
+      display: grid;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .table-users {
+    @apply border-separate;
+    border-spacing: 0;
+    td:first-child,
+    th:first-child {
+      @apply sticky top-0 z-10 left-0 border-r border-r-gray-100;
+      min-width: 150px;
+    }
+    td:first-child {
+      @apply bg-white;
+    }
+    th:first-child {
+      @apply bg-gray-100;
+    }
+    th,
+    td {
+      @apply border-b border-b-gray-100;
+    }
+  }
+}
+/* End: Table */
